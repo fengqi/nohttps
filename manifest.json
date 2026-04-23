@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "NoHTTPS Redirector",
+  "description": "Redirect configured HTTPS domains to HTTP for top-level navigation.",
+  "version": "1.0.0",
+  "permissions": [
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "NoHTTPS Redirector",
+    "default_popup": "popup.html"
+  }
+}

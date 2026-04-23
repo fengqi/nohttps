@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NoHTTPS Redirector</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>NoHTTPS Redirector</h1>
+
+      <label for="redirectDomains">Redirect domains (one per line)</label>
+      <textarea
+        id="redirectDomains"
+        rows="7"
+        placeholder="example.com&#10;foo.com"
+      ></textarea>
+
+      <label for="ignoreDomains">Ignore domains (one per line)</label>
+      <textarea
+        id="ignoreDomains"
+        rows="5"
+        placeholder="ignore.com"
+      ></textarea>
+
+      <div class="actions">
+        <button id="saveButton" type="button">Save</button>
+        <button id="clearButton" type="button" class="secondary">Clear</button>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
